@@ -1,0 +1,9 @@
+.dart_tool/
+.gradle/
+.pods/
+build/
+dist/
+Pods/
+pubspec.lock
+*.log
+.DS_Store

@@ -1,0 +1,24 @@
+name: native_keychain
+description: Configurable iOS Keychain access for DartNative.
+version: 0.1.0
+publish_to: https://dartpub.dev
+homepage: https://github.com/tayormi/native_keychain
+repository: https://github.com/tayormi/native_keychain
+issue_tracker: https://github.com/tayormi/native_keychain/issues
+environment:
+  sdk: '>=3.9.0 <4.0.0'
+dependencies:
+  ffi: ^2.1.4
+dev_dependencies:
+  test: ^1.25.15
+  lints: ^5.1.1
+dartnative:
+  plugin:
+    platforms:
+      ios:
+        ffiPlugin: true
+  registrant:
+    imports:
+      - package:native_keychain/native_keychain.dart
+    calls:
+      - KeychainBindings.loadSymbols();
