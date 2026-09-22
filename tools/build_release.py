@@ -36,9 +36,10 @@ if name == 'native_sqlcipher' and android:
     assert 'net.zetetic:sqlcipher-android:4.10.0' in (artifact / 'android/build.gradle').read_text()
 # Publish useful source docs and examples alongside the hosted Dart library.
 source = root / 'dist' / f'{name}-{version}-src'
-for folder in ('docs', 'example', 'test'):
+for folder in ('docs', 'example', 'test', 'ios', 'android'):
     if (root / folder).exists():
-        shutil.copytree(root / folder, source / folder, dirs_exist_ok=True)
+        shutil.copytree(root / folder, source / folder, dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns('build', '.gradle', 'Pods', '.symlinks', '*.log'))
 for filename in ('SQLCIPHER-LICENSE', 'THIRD_PARTY_NOTICES'):
     if (root / filename).exists():
         shutil.copyfile(root / filename, source / filename)

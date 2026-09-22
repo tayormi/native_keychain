@@ -10,7 +10,7 @@ Add to your DartNative app's `pubspec.yaml`:
 dependencies:
   native_keychain:
     hosted: https://dartpub.dev
-    version: ^0.1.0
+    version: ^0.1.1
 ```
 
 Run `dn pub get`, then rebuild the app to link the native plugin. Use the generated plugin registrant provided by your DartNative app template.

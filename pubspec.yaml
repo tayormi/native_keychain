@@ -1,6 +1,6 @@
 name: native_keychain
 description: Configurable iOS Keychain access for DartNative.
-version: 0.1.0
+version: 0.1.1
 publish_to: https://dartpub.dev
 homepage: https://github.com/tayormi/native_keychain
 repository: https://github.com/tayormi/native_keychain
